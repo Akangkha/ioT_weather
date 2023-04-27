@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="weather_style.css" />
+    <title>Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@700;900&family=Open+Sans:wght@600&family=Oswald:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="all1">
+      <div class="title">
+        ioT Lab
+        <div class="sub">KIIT</div>
+      </div>
+    </div>
+
+    <div class="all2">
+      <div class="title welcome">Welcome back</div>
+    </div>
+
+    <div class="dash">
+      <div class="header_dash">
+        <div>Welcome back</div>
+
+        <div class="date">25 Sunday, April</div>
+      </div>
+      <div class="info">
+        <div class="glass temp">
+          <div class="temp_img">
+            <img
+              src="./images/temp.png"
+              width="60%"
+              height="60%"
+              alt="weather_status"
+            />
+          </div>
+          <div class="temperature">
+            Temperature
+            <p class="temperature_value">42<span>°</span></p>
+            <div class="day">Sunday</div>
+          </div>
+        </div>
+        <div class="weather glass">
+          <div class="pic">
+            <p>Rain</p>
+            <img
+              src="./images/rain.png"
+              alt="weather"
+              width="70%"
+              height="70%"
+            />
+          </div>
+        </div>
+        <div class="glass">
+          <div class="humidity">
+            Humidity
+            <img src="./images/Ellipse.png" width="100px" />
+            <p class="hum_value">42</p>
+            <p>%</p>
+          </div>
+          <div class="drop"><img src="./images/humid.png" width="150px" /></div>
+        </div>
+        <div class="glass">
+          <div class="light">
+            Light
+            <p class="light_value">17</p>
+            <p>lux</p>
+          </div>
+          <div class="light_img">
+            <img src="./images/light.png" width="180px" />
+          </div>
+        </div>
+
+        <div class="glass graph">
+          <div class="values">
+            <div class="total"><div class="bar"></div></div>
+            <div class="total"><div class="bar"></div></div>
+            <div class="total"><div class="bar"></div></div>
+          </div>
+          <img src="./images/gas.png" width="140px" class="gas" />
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
