@@ -103,7 +103,7 @@ function getData() {
   }).then((data)=>{
     document.getElementById('temperature_value').insertAdjacentText('beforeend',parseFloat(data.data[0].temperature).toFixed(1));
     document.getElementById('humidity_value').setAttribute('style',`--value: ${data.data[0].humidity}`)
-    document.getElementById('humidity_value').insertAdjacentText('beforeend',parseFloat(data.data[0].temperature).toFixed(0));
+    document.getElementById('humidity_value').insertAdjacentText('beforeend',parseFloat(data.data[0].humidity).toFixed(0));
   })
 
   url_energy="https://api.iotkiit.in/items/energy_meter";
