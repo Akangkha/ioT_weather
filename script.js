@@ -105,10 +105,8 @@ function getData() {
   fetch(url).then((response)=>{
     return response.json();
   }).then((data)=>{
-    console.log(data.data[0].temperature);
-    const markup = (data.data[0].temperature);
-    console.log(markup);
-    document.getElementById('temperature_value').insertAdjacentText('beforeend',markup);
+    document.getElementById('temperature_value').insertAdjacentText('beforeend',data.data[0].temperature);
+    document.getElementById('humidity_value').setAttribute('style',`--value: ${data.data[0].humidity}`)
   })
 }
 
