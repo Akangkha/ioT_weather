@@ -94,11 +94,7 @@ replace1();
 replace2();
 
 
-setInterval(() => {
-  replace1();
-  replace2();
 
-}, 25800);
 
 function getData() {
   url="https://api.iotkiit.in/items/weather";
