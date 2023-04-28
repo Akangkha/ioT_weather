@@ -40,3 +40,14 @@ setInterval(() => {
   replace2();
   replace3();
 }, 25800);
+
+function getData() {
+  url="https://api.iotkiit.in/items/weather";
+  fetch(url).then((response)=>{
+    return response.json();
+  }).then((data)=>{
+    console.log(data);
+  })
+}
+
+getData();
