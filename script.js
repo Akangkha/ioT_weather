@@ -1,3 +1,69 @@
+const data = [
+  { x: 0, y: 30 },
+  { x: 20, y: 50 },
+  { x: 40, y: 80 },
+  { x: 50, y: 10 },
+  { x: 60, y: 70 },
+  { x: 70, y: 80 },
+  { x: 80, y: 8 },
+];
+
+function drawLineChart(ctx, data) {
+  const chartArea = { x: 60, y: 20, width: 220, height: 50 };
+
+  // Calculate the scale of the chart
+  const xScale = chartArea.width / (data.length - 1);
+  const yScale = chartArea.height / 100;
+
+  // Create a linear gradient for the area under the chart
+  const gradient = ctx.createLinearGradient(
+    chartArea.x,
+    chartArea.y,
+    chartArea.x,
+    chartArea.y + chartArea.height
+  );
+  gradient.addColorStop(0, "rgba(184,184,184, 1)");
+  gradient.addColorStop(1, "rgba(255, 255, 255, 0)");
+
+  // Begin drawing the chart
+  ctx.beginPath();
+  ctx.moveTo(chartArea.x, chartArea.y + chartArea.height);
+
+  // Draw the line chart
+  data.forEach((point, i) => {
+    const x = chartArea.x + i * xScale;
+    const y = chartArea.y + chartArea.height - point.y * yScale;
+    ctx.lineTo(x, y);
+  });
+
+  // Close the path
+  ctx.lineTo(chartArea.x + chartArea.width, chartArea.y + chartArea.height);
+  ctx.lineTo(chartArea.x, chartArea.y + chartArea.height);
+  ctx.closePath();
+
+  // Fill the area under the chart with a gradient
+  ctx.fillStyle = gradient;
+  ctx.fill();
+
+  // Draw the data points
+  data.forEach((point, i) => {
+    const x = chartArea.x + i * xScale;
+    const y = chartArea.y + chartArea.height - point.y * yScale;
+    ctx.beginPath();
+    ctx.arc(x, y, 10, 0, 2 * Math.PI);
+    ctx.fillStyle = "#09A8FA";
+    ctx.strokeStyle = i !== 4 ? "#fff" : "#FFD15E";
+    ctx.lineWidth = 5;
+    ctx.fill();
+    ctx.stroke();
+  });
+}
+
+const canvas = document.getElementById("myChart");
+const ctx = canvas.getContext("2d");
+
+drawLineChart(ctx, data);
+
 var all1 = document.querySelector(".all1");
 var all2 = document.querySelector(".all2");
 var dash = document.querySelector(".dash");
@@ -24,19 +90,5 @@ function replace2() {
   }, 10800);
 }
 
-function replace3() {
-  setTimeout(() => {
-    console.log("dash is replaced by all1");
-    dash.style.display = "none";
-    all1.style.display = "flex";
-  }, 25800);
-}
-
 replace1();
 replace2();
-replace3();
-setInterval(() => {
-  replace1();
-  replace2();
-  replace3();
-}, 25800);
