@@ -103,6 +103,7 @@ function getData() {
   }).then((data)=>{
     document.getElementById('temperature_value').insertAdjacentText('beforeend',data.data[0].temperature);
     document.getElementById('humidity_value').setAttribute('style',`--value: ${data.data[0].humidity}`)
+    document.getElementById('humidity_value').insertAdjacentText('beforeend',data.data[0].humidity);
   })
 }
 
