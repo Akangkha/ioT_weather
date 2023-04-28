@@ -134,7 +134,7 @@ body {
 
 .drop {
   position: fixed;
-  right: 1%;
+  right: 0;
   top: 36vh;
 }
 
@@ -392,7 +392,7 @@ body {
 .rain_value {
   font-family: "Bebas Neue", cursive;
   color: #ffffff;
-  font-size: 2em;
+  font-size: 70px;
 }
 
 .probability {
@@ -413,7 +413,7 @@ body {
 
 .Rain {
   position: fixed;
-  top: 22%;
+  top: 24%;
 }
 
 .gas {
@@ -507,9 +507,9 @@ canvas {
 }
 
 .total p {
-  font-size: 14px;
+  font-size: 13px;
   position: relative;
-  top: 50%;
+  top: 45%;
 }
 
 .total {
