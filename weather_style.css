@@ -301,7 +301,7 @@ body {
 .bar {
   width: 3px;
   background-color: white;
-  height: 50px;
+  /* height: 50px; */
   border-radius: 6px;
   border-bottom-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -491,10 +491,10 @@ body {
 }
 
 [role="progressbar"]::after {
-  counter-reset: percentage var(--value);
-  content: counter(percentage);
+  /* counter-reset: percentage var(--value);
+  content: counter(percentage); */
   font-family: "SF Pro Display", sans-serif;
-  font-size: 30px;
+  font-size: 60px;
   color: white;
 }
 
