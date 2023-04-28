@@ -92,6 +92,8 @@ body {
 .header_dash {
   display: flex;
   margin-bottom: 10px;
+  margin-top: 10px;
+
   width: 85vw;
   height: 50px;
   border-bottom: 2px solid #ffffff;
@@ -132,7 +134,7 @@ body {
 
 .drop {
   position: fixed;
-  right: 5%;
+  right: 1%;
   top: 36vh;
 }
 
