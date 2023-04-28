@@ -29,14 +29,14 @@
       <div class="header_dash">
         <div>IoT Lab KiiT</div>
 
-        <div class="date">25 Sunday, April</div>
+        <div class="date">28 Friday, April</div>
       </div>
       <div class="info">
         <div class="glass temp">
           <div class="temperature">
             Temperature
-            <p class="temperature_value"><span id="temperature_value"></span><span>°</span></p>
-            <div class="day">Sunday</div>
+            <p class="temperature_value">29<span>°</span></p>
+            <div class="day">Friday</div>
           </div>
           <div class="graph_img">
             <canvas id="myChart" width="310" height="100"></canvas>
@@ -55,9 +55,7 @@
             <div class="Rain">
               Rain
               <div class="row">
-
                 <div class="rain_value">70%</div>
-
                 <div class="probability">CHANCE <br />OF RAIN</div>
               </div>
               <!-- <div class="model">predicted using {} model</div> -->
@@ -67,6 +65,7 @@
               alt="weather"
               width="150%"
               height="80%"
+              style="font-size: 30px"
             />
           </div>
         </div>
@@ -74,11 +73,11 @@
           <div class="humidity">
             Humidity
             <div
-              id="humidity_value"
               role="progressbar"
               aria-valuenow="33"
               aria-valuemin="0"
               aria-valuemax="100"
+              style="--value: "
             ></div>
             <p>%</p>
           </div>
@@ -89,22 +88,22 @@
 
           <div class="lightg">
             <div class="power">
-              <div class="pv" id="pv"></div>
+              <div class="pv">2.3</div>
               power
             </div>
             <div class="line"></div>
             <div class="voltage">
-              <div class="vv" id="vv"></div>
+              <div class="vv">227</div>
               voltage
             </div>
             <div class="line"></div>
             <div class="freq">
-              <div class="fv" id="fv"></div>
+              <div class="fv">50</div>
               freq
             </div>
             <div class="line"></div>
             <div class="factor">
-              <div class="facv" id="facv">27</div>
+              <div class="facv">23</div>
               power factor
             </div>
           </div>
@@ -113,25 +112,25 @@
         <div class="glass graph">
           <div class="values">
             Gas - 6
-            <div class="total">
-              <div class="bar" style="height: 200px !important;"></div>
+            <div class="total1">
+              <div class="bar1"></div>
               <p>methane</p>
             </div>
 
-            <div class="total" >
-              <div class="bar" style="height: 70px;"></div>
+            <div class="total">
+              <div class="bar"></div>
               <p>propane</p>
             </div>
             <div class="total">
-              <div class="bar" style="height:90px"></div>
+              <div class="bar"></div>
               <p>NG</p>
             </div>
-            <div class="total">
-              <div class="bar" style="height:80px"></div>
+            <div class="total1">
+              <div class="bar1"></div>
               <p>CO</p>
             </div>
             <div class="total">
-              <div class="bar" style="height:85px"></div>
+              <div class="bar"></div>
               <p>hydrogen</p>
             </div>
           </div>
