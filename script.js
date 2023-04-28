@@ -93,32 +93,23 @@ function replace2() {
 replace1();
 replace2();
 
-
-
-
 function getData() {
-  url_weather="https://api.iotkiit.in/items/weather";
-  fetch(url_weather).then((response)=>{
-    return response.json();
-  }).then((data)=>{
-    document.getElementById('temperature_value').insertAdjacentText('beforeend',parseFloat(data.data[0].temperature).toFixed(1));
-    document.getElementById('humidity_value').setAttribute('style',`--value: ${data.data[0].humidity}; font-size: 30px`)
-    document.getElementById('humidity_value').insertAdjacentText('beforeend',parseFloat(data.data[0].humidity).toFixed(0)).setAttribute('style','font-size: 30px');
-  })
-
-  url_energy="https://api.iotkiit.in/items/energy_meter";
-  fetch(url_energy).then((response)=>{
-    return response.json();
-  }).then((data)=>{
-    console.log(data);
-    document.getElementById('pv').insertAdjacentText('beforeend',parseFloat(data.data[0].power).toFixed(1));
-    document.getElementById('vv').insertAdjacentText('beforeend',parseFloat(data.data[0].voltage).toFixed(1));
-    document.getElementById('fv').insertAdjacentText('beforeend',parseFloat(data.data[0].frequency).toFixed(1));
-    // document.getElementById('facv').insertAdjacentText('beforeend',parseFloat(data.data[0].powerFactor).toFixed(1));
-  })
+  url = "https://api.iotkiit.in/items/weather";
+  fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      document
+        .getElementById("temperature_value")
+        .insertAdjacentText("beforeend", data.data[0].temperature);
+      document
+        .getElementById("humidity_value")
+        .setAttribute("style", `--value: ${data.data[0].humidity}`);
+      document
+        .getElementById("humidity_value")
+        .insertAdjacentText("beforeend", data.data[0].humidity);
+    });
 }
 
 getData();
-
-
-
