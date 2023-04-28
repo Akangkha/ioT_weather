@@ -392,7 +392,7 @@ body {
 .rain_value {
   font-family: "Bebas Neue", cursive;
   color: #ffffff;
-  font-size: 3em;
+  font-size: 6.3rem;
 }
 
 .probability {
@@ -413,7 +413,7 @@ body {
 
 .Rain {
   position: fixed;
-  top: 23%;
+  top: 24%;
 }
 
 .gas {
