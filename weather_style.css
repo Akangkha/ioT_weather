@@ -494,7 +494,7 @@ body {
   /* counter-reset: percentage var(--value);
   content: counter(percentage); */
   font-family: "SF Pro Display", sans-serif;
-  font-size: 60px;
+  font-size: 30px;
   color: white;
 }
 
